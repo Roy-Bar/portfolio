@@ -3,6 +3,7 @@
 import { ExternalLink } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import TiltCard from "@/components/ui/TiltCard";
+import { GithubIcon } from "@/components/ui/BrandIcons";
 import { projects } from "@/lib/content";
 
 export default function Projects() {
@@ -23,17 +24,30 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold text-[color:var(--foreground)]">
                     {p.title}
                   </h3>
-                  {p.href && (
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`Open ${p.title}`}
-                      className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                    </a>
-                  )}
+                  <div className="flex items-center gap-3 shrink-0">
+                    {p.sourceHref && (
+                      <a
+                        href={p.sourceHref}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Source for ${p.title}`}
+                        className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition-colors"
+                      >
+                        <GithubIcon size={16} />
+                      </a>
+                    )}
+                    {p.href && (
+                      <a
+                        href={p.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${p.title}`}
+                        className="text-[color:var(--muted)] hover:text-[color:var(--accent)] transition-colors"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                  </div>
                 </div>
                 {p.meta && (
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted)] mb-3">

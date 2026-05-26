@@ -49,6 +49,7 @@ export type Project = {
   blurb: string;
   tags: string[];
   href?: string;
+  sourceHref?: string;
   meta?: string;
 };
 
@@ -68,13 +69,13 @@ export const projects: Project[] = [
     meta: "Tenen Group · internal",
   },
   {
-    title: "tg-react-gtm-module",
+    title: "Tiny Bites — Baby Feeding Tracker",
     blurb:
-      "Open-source React module that wires Google Tag Manager into modern React apps with a minimal, ergonomic API.",
-    tags: ["React", "GTM", "JavaScript", "Open source"],
-    href: "https://github.com/Roy-TG/tg-react-gtm-module",
-    // Note: this repo lives under the Tenen Group GitHub org (Roy-TG)
-    meta: "Open source · 2024",
+      "A warm, friendly app for new parents to log feedings, share with co-parents, and visualize patterns. Real-time multi-user, auth, charts, and CSV export — built end to end.",
+    tags: ["React 18", "Vite", "Firebase Auth", "Firestore", "Recharts", "Tailwind"],
+    href: "https://tiny-bites-57104.web.app",
+    sourceHref: "https://github.com/Roy-Bar/tiny-bites",
+    meta: "Side project · live",
   },
 ];
 
