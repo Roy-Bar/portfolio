@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Roy Bar — Portfolio
 
-## Getting Started
+Personal portfolio site. Next.js 16 (App Router) · React 19 · TypeScript · Tailwind v4 · Framer Motion · React Three Fiber.
 
-First, run the development server:
+## Local dev
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+All copy, projects, skills, experience, and social links live in **one file**:
 
-To learn more about Next.js, take a look at the following resources:
+- `lib/content.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To swap the CV download, drop a `cv.pdf` into `public/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy (Vercel)
 
-## Deploy on Vercel
+1. Push this repo to GitHub.
+2. On https://vercel.com → **Add New → Project → Import** the repo.
+3. Accept defaults (Next.js auto-detected). First deploy → live at `*.vercel.app`.
+4. Every push to `main` deploys; every PR gets a preview URL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Adding a custom domain later
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel → Project → **Settings → Domains → Add**. Point DNS at Vercel (A `76.76.21.21` for apex; CNAME `cname.vercel-dns.com` for `www`). SSL auto-provisions. No code change needed.
+
+## Project structure
+
+```
+app/                  # routes, layout, metadata, OG image, sitemap, robots
+components/
+  Nav.tsx
+  sections/           # one file per page section
+  three/HeroScene.tsx # R3F scene (lazy-loaded, respects prefers-reduced-motion)
+  ui/                 # small shared bits (SectionHeading, TiltCard, CopyEmail)
+lib/content.ts        # single source of truth for content
+public/               # static assets (cv.pdf, avatar.png, favicon)
+```
+
+## TODO before going live
+
+- [ ] Add real `public/cv.pdf`
+- [ ] Fill bio paragraphs, project blurbs, employment dates in `lib/content.ts`
+- [ ] Update the canonical URL in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts` once a custom domain is set
