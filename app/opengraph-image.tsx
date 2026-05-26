@@ -66,7 +66,7 @@ export default function OG() {
           }}
         >
           <span>React · Next.js · TypeScript</span>
-          <span>roy-bar.vercel.app</span>
+          <span>roy-bar-dev.vercel.app</span>
         </div>
       </div>
     ),

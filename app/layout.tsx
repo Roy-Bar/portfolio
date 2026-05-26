@@ -14,7 +14,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://roy-bar.vercel.app";
+const siteUrl = "https://roy-bar-dev.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
