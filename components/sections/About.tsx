@@ -20,16 +20,26 @@ export default function About() {
             className="md:col-span-3 text-lg leading-relaxed text-[color:var(--foreground)]/90 space-y-4"
           >
             <p>
-              I&apos;m a developer focused on the web — I care about how
-              interfaces <em className="text-[color:var(--accent)] not-italic">feel</em>,
-              how they perform at scale, and the systems that ship them
-              reliably.
+              I build the software other people{" "}
+              <em className="text-[color:var(--accent)] not-italic">operate</em> —
+              the dashboards, targeting rules and pricing tools that let content
+              and product teams change a storefront without touching code. It
+              means caring about how an interface feels, how it holds up at
+              scale, and the services behind it in equal measure.
             </p>
             <p className="text-[color:var(--muted)]">
-              At <span className="text-[color:var(--foreground)]">Tenen Group</span> I work across a
-              large Next.js codebase serving millions of sessions: feature-flagged
-              experiments, real-user monitoring, internal tooling, and the
-              occasional open-source module.
+              At <span className="text-[color:var(--foreground)]">Tenen Group</span> I&apos;ve spent
+              five years on a multi-brand commerce platform serving millions of
+              sessions — building its A/B testing product from an empty screen,
+              owning cross-sell and catalog pricing end to end, and writing the
+              C# behind my own React when the feature needed it. Lately I build
+              agentic tooling for the team, too.
+            </p>
+            <p className="text-[color:var(--muted)]">
+              I got here sideways: CS degree, then automation scripts, SQL and
+              Kibana dashboards on the technical-solutions side before I moved
+              into product engineering. That&apos;s why the backend half never
+              feels like someone else&apos;s problem.
             </p>
             <div className="pt-2 flex items-center gap-2 text-sm text-[color:var(--muted)] font-mono">
               <MapPin size={14} className="text-[color:var(--accent)]" />
@@ -44,8 +54,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="md:col-span-2 grid grid-cols-2 gap-4"
           >
-            <Stat k="Stack" v="React · Next" />
-            <Stat k="Lang" v="TypeScript" />
+            <Stat k="Stack" v="React · Next · .NET" />
+            <Stat k="Experience" v="5+ years" />
             <Stat k="Scale" v="M+ sessions" />
             <Stat k="Mode" v="Open to chat" />
           </motion.div>

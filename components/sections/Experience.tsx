@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { experience } from "@/lib/content";
+import { education, experience } from "@/lib/content";
 
 export default function Experience() {
   return (
@@ -18,7 +18,7 @@ export default function Experience() {
           <ul className="space-y-10">
             {experience.map((e, i) => (
               <motion.li
-                key={e.company}
+                key={`${e.company}-${e.period}`}
                 initial={{ opacity: 0, x: 12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
@@ -54,6 +54,40 @@ export default function Experience() {
             ))}
           </ul>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+          className="mt-16"
+        >
+          <h3 className="font-mono text-xs uppercase tracking-widest text-[color:var(--muted)]">
+            Education
+          </h3>
+          <ul className="mt-4 space-y-4">
+            {education.map((ed) => (
+              <li key={ed.school} className="glass rounded-2xl p-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <p className="font-semibold text-[color:var(--foreground)]">
+                    {ed.degree}{" "}
+                    <span className="font-normal text-[color:var(--muted)]">
+                      · {ed.school}
+                    </span>
+                  </p>
+                  <span className="font-mono text-xs text-[color:var(--muted)]">
+                    {ed.period}
+                  </span>
+                </div>
+                {ed.note && (
+                  <p className="mt-2 text-sm leading-relaxed text-[color:var(--foreground)]/75">
+                    {ed.note}
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </section>
   );
