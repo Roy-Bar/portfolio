@@ -1,9 +1,21 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useSyncExternalStore } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, MeshDistortMaterial } from "@react-three/drei";
 import * as THREE from "three";
+
+/* Deterministic PRNG (mulberry32) — pure, so particle placement is stable
+   across renders and safe to compute during render. */
+function seededRandom(seed: number) {
+  let a = seed;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
 
 function FloatingShape() {
   const ref = useRef<THREE.Mesh>(null);
@@ -36,11 +48,12 @@ function Particles({ count = 220 }: { count?: number }) {
   const ref = useRef<THREE.Points>(null);
 
   const positions = useMemo(() => {
+    const rand = seededRandom(count * 7919);
     const arr = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      arr[i * 3] = (Math.random() - 0.5) * 14;
-      arr[i * 3 + 1] = (Math.random() - 0.5) * 8;
-      arr[i * 3 + 2] = (Math.random() - 0.5) * 6 - 2;
+      arr[i * 3] = (rand() - 0.5) * 14;
+      arr[i * 3 + 1] = (rand() - 0.5) * 8;
+      arr[i * 3 + 2] = (rand() - 0.5) * 6 - 2;
     }
     return arr;
   }, [count]);
@@ -72,16 +85,20 @@ function Particles({ count = 220 }: { count?: number }) {
   );
 }
 
-export default function HeroScene() {
-  const [reduced, setReduced] = useState(false);
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
-  useEffect(() => {
-    const m = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(m.matches);
-    const handler = (e: MediaQueryListEvent) => setReduced(e.matches);
-    m.addEventListener?.("change", handler);
-    return () => m.removeEventListener?.("change", handler);
-  }, []);
+function subscribeToReducedMotion(onChange: () => void) {
+  const m = window.matchMedia(REDUCED_MOTION_QUERY);
+  m.addEventListener("change", onChange);
+  return () => m.removeEventListener("change", onChange);
+}
+
+export default function HeroScene() {
+  const reduced = useSyncExternalStore(
+    subscribeToReducedMotion,
+    () => window.matchMedia(REDUCED_MOTION_QUERY).matches,
+    () => false,
+  );
 
   if (reduced) return null;
 

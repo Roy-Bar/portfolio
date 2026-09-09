@@ -20,8 +20,9 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-lg text-[color:var(--muted)] mb-10"
         >
-          Open to interesting roles, freelance work, and a good conversation.
-          The fastest way to reach me is email.
+          Always happy to talk — about commerce platforms, the tooling around
+          them, or whatever you&apos;re building. The fastest way to reach me is
+          email.
         </motion.p>
 
         <div className="flex flex-col items-center gap-6">

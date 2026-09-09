@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks, profile } from "@/lib/content";
 import clsx from "clsx";
 
-export default function Nav() {
+export default function Nav({ linkPrefix = "" }: { linkPrefix?: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Nav() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
-          href="#top"
+          href={`${linkPrefix}#top`}
           className="font-mono text-sm tracking-tight text-[color:var(--foreground)]"
         >
           <span className="text-[color:var(--accent)]">{"<"}</span>
@@ -40,7 +40,7 @@ export default function Nav() {
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={`${linkPrefix}${l.href}`}
                 className="text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition-colors"
               >
                 {l.label}
@@ -58,7 +58,9 @@ export default function Nav() {
         </ul>
 
         <button
-          aria-label="Toggle menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-[color:var(--foreground)] p-2"
         >
@@ -69,6 +71,7 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -79,7 +82,7 @@ export default function Nav() {
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <a
-                    href={l.href}
+                    href={`${linkPrefix}${l.href}`}
                     onClick={() => setOpen(false)}
                     className="block py-2 text-[color:var(--muted)] hover:text-[color:var(--foreground)]"
                   >

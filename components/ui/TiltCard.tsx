@@ -7,9 +7,11 @@ import clsx from "clsx";
 type Props = {
   children: React.ReactNode;
   className?: string;
+  /** Colour of the cursor-following glow. Defaults to the cyan accent. */
+  glow?: string;
 };
 
-export default function TiltCard({ children, className }: Props) {
+export default function TiltCard({ children, className, glow }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -41,18 +43,21 @@ export default function TiltCard({ children, className }: Props) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45 }}
       className={clsx("relative isolate", className)}
-      style={{
-        transform:
-          "perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
-        transition: "transform 200ms ease",
-      }}
+      style={
+        {
+          transform:
+            "perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))",
+          transition: "transform 200ms ease",
+        } as React.CSSProperties
+      }
     >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          background:
-            "radial-gradient(220px circle at var(--mx) var(--my), rgba(34,211,238,0.18), transparent 70%)",
+          background: `radial-gradient(220px circle at var(--mx) var(--my), ${
+            glow ?? "rgba(34,211,238,0.18)"
+          }, transparent 70%)`,
         }}
       />
       {children}

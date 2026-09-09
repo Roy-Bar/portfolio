@@ -44,13 +44,19 @@ components/
   Nav.tsx
   sections/           # one file per page section
   three/HeroScene.tsx # R3F scene (lazy-loaded, respects prefers-reduced-motion)
-  ui/                 # small shared bits (SectionHeading, TiltCard, CopyEmail)
+  ui/                 # shared bits (SectionHeading, TiltCard, CopyEmail, PlatformDiagram)
 lib/content.ts        # single source of truth for content
-public/               # static assets (cv.pdf, avatar.png, favicon)
+public/               # static assets (cv.pdf)
 ```
 
-## TODO before going live
+## Content model
 
-- [ ] Add real `public/cv.pdf`
-- [ ] Fill bio paragraphs, project blurbs, employment dates in `lib/content.ts`
-- [ ] Update the canonical URL in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts` once a custom domain is set
+`lib/content.ts` is deliberately the only file with copy in it:
+
+- `profile` — name, role, tagline, email, socials
+- `skillGroups` — skill chips, grouped by layer of the stack
+- `projects` — one card each, with a separate `outcome` line (what changed, not just what was built)
+- `experience` — company → `note` (what the company actually is, for readers who have never heard of it) → `roles[]`
+- `education`, `navLinks`
+
+`components/ui/PlatformDiagram.tsx` holds the architecture diagram as inline SVG — no image assets, no chart library.

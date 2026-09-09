@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.name} · built with Next.js + R3F
         </p>
         <a
-          href={profile.socials.github}
+          href={profile.socials.repo}
           target="_blank"
           rel="noreferrer"
           className="font-mono text-xs hover:text-[color:var(--accent)] transition-colors"

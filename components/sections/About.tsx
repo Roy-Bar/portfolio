@@ -22,24 +22,44 @@ export default function About() {
             <p>
               I build the software other people{" "}
               <em className="text-[color:var(--accent)] not-italic">operate</em> —
-              the dashboards, targeting rules and pricing tools that let content
-              and product teams change a storefront without touching code. It
+              the backoffice systems, targeting rules and pricing tools that let
+              content and product teams change a storefront without touching code. It
               means caring about how an interface feels, how it holds up at
               scale, and the services behind it in equal measure.
             </p>
             <p className="text-[color:var(--muted)]">
-              At <span className="text-[color:var(--foreground)]">Tenen Group</span> I&apos;ve spent
-              five years on a multi-brand commerce platform serving millions of
-              sessions — building its A/B testing product from an empty screen,
-              owning cross-sell and catalog pricing end to end, and writing the
-              C# behind my own React when the feature needed it. Lately I build
-              agentic tooling for the team, too.
+              For six years that has been at{" "}
+              <span className="text-[color:var(--foreground)]">Tenengroup</span>, a
+              multi-brand direct-to-consumer e-commerce group — eight brands,
+              multiple countries and currencies, millions of sessions a month,
+              with the storefronts, content platform and backoffice tools all
+              built in house.
             </p>
             <p className="text-[color:var(--muted)]">
-              I got here sideways: CS degree, then automation scripts, SQL and
-              Kibana dashboards on the technical-solutions side before I moved
-              into product engineering. That&apos;s why the backend half never
-              feels like someone else&apos;s problem.
+              The work has moved outward in layers. I started on the storefront
+              itself: its category, product, cart and checkout surfaces, first on
+              the legacy stack and then on the Next.js platform that replaced it.
+              That led into the cross-cutting problems — an analytics layer built
+              from scratch, a theming system that turned eight diverging brands
+              into configuration, and the internationalization and multi-currency
+              work that opened new markets. Lately it&apos;s the tools one level
+              up: an A/B testing product, content targeting, and a catalog and
+              pricing backoffice, with the C# behind my own React when the
+              feature needs it.
+            </p>
+            <p className="text-[color:var(--muted)]">
+              I got here sideways. Before engineering I ran the technical side of
+              e-commerce operations across a dozen country sites — production SQL,
+              automation, dashboards and third-party integrations. That&apos;s why
+              the backend half never feels like someone else&apos;s problem, and
+              why I tend to notice the operational cost of a design before it
+              ships.
+            </p>
+            <p className="text-[color:var(--muted)]">
+              These days I build the team&apos;s AI tooling too — an autonomous UI
+              QA agent, and a searchable knowledge graph over twenty of the
+              group&apos;s services so cross-repo questions stop being
+              archaeology.
             </p>
             <div className="pt-2 flex items-center gap-2 text-sm text-[color:var(--muted)] font-mono">
               <MapPin size={14} className="text-[color:var(--accent)]" />
@@ -55,8 +75,8 @@ export default function About() {
             className="md:col-span-2 grid grid-cols-2 gap-4"
           >
             <Stat k="Stack" v="React · Next · .NET" />
-            <Stat k="Experience" v="5+ years" />
-            <Stat k="Scale" v="M+ sessions" />
+            <Stat k="Experience" v="6+ years" />
+            <Stat k="Domain" v="E-commerce platforms" />
             <Stat k="Mode" v="Open to chat" />
           </motion.div>
         </div>
