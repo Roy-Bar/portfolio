@@ -36,6 +36,8 @@ export type ProjectDetail = {
   gallery?: { intro: string; shots: Shot[] };
   animation?: { webp: string; gif: string; alt: string; caption: string };
   links?: { label: string; href: string }[];
+  /** Absolute-from-root share image; falls back to the site-wide card. */
+  shareImage?: string;
 };
 
 export const projectDetails: ProjectDetail[] = [
@@ -363,6 +365,7 @@ export const projectDetails: ProjectDetail[] = [
   },
   {
     slug: "tiny-bites",
+    shareImage: "/projects/tiny-bites/share.png",
     title: "Tiny Bites — Baby Feeding Tracker",
     period: "2026",
     meta: "Side project · live",

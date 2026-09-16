@@ -27,7 +27,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `${detail.title} · Roy Bar`,
       description: detail.lede,
       url: `/projects/${detail.slug}`,
+      ...(detail.shareImage
+        ? { images: [{ url: detail.shareImage, width: 1200, height: 630 }] }
+        : {}),
     },
+    ...(detail.shareImage
+      ? {
+          twitter: {
+            card: "summary_large_image" as const,
+            title: `${detail.title} · Roy Bar`,
+            description: detail.lede,
+            images: [detail.shareImage],
+          },
+        }
+      : {}),
   };
 }
 
