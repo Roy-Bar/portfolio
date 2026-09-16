@@ -1,6 +1,6 @@
 export const profile = {
   name: "Roy Bar",
-  role: "Senior Frontend & Full-Stack Engineer",
+  role: "Software Engineer",
   tagline:
     "I build the systems non-engineers operate — experimentation platforms, backoffice and pricing tools, and the multi-brand storefronts they drive. React, Next.js, TypeScript, and the .NET services behind them.",
   location: "Tel Aviv, Israel",
@@ -259,7 +259,7 @@ export const experience: Experience[] = [
     note: "Multi-brand direct-to-consumer e-commerce group — eight brands, multiple countries and currencies, millions of sessions a month. Its storefronts, content platform and backoffice tools are all built in house.",
     roles: [
       {
-        title: "Senior Frontend & Full-Stack Engineer",
+        title: "Software Engineer",
         period: "Sep 2021 — Present",
         bullets: [
           "Five years on the group's storefront platform, across its category, product, review, cart and checkout surfaces — first on the legacy storefront, then on the Next.js platform that replaced it, and now the thin JSON APIs retiring the last legacy pages.",
@@ -270,7 +270,7 @@ export const experience: Experience[] = [
           "Built the content-targeting editor alongside it: audience, geography, device and cart-based page filters, variant priority, cloning and bulk actions, and optimistic locking with conflict resolution so two editors can't silently overwrite each other.",
           "Delivered a catalog & pricing backoffice 0→1 — one of several backoffice systems I own — replacing a spreadsheet-and-SQL process with a multi-currency tool merchandisers publish from themselves — including the C# that recomputes per-currency prices from a base price on save.",
           "Own product-bundle configurators end to end — configurable multi-item products where each slot carries its own options, price and stock — across the authoring UI, the REST APIs, the storefront rendering and the analytics.",
-          "Work full-stack when the feature needs it: C# endpoints across several .NET services, consumed by the React and Next.js surfaces I build on top of them.",
+          "Work across the boundary when a feature needs it: C# endpoints across several .NET services, consumed by the React and Next.js surfaces I build on top of them.",
           "Build leverage for the team: an autonomous UI QA agent, a cross-repo code knowledge index, versioned releases with written release notes, and design specs before code. De-facto frontend reviewer on the platform.",
         ],
       },

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Roy Bar — Senior Frontend & Full-Stack Engineer";
+export const alt = "Roy Bar — Software Engineer";
 
 export default function OG() {
   return new ImageResponse(
@@ -52,7 +52,16 @@ export default function OG() {
               letterSpacing: -1,
             }}
           >
-            Senior Frontend & Full-Stack Engineer
+            Software Engineer
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 24,
+              color: "#6f6f80",
+            }}
+          >
+            Backoffice, pricing and experimentation systems for 8 e-commerce brands
           </div>
         </div>
 

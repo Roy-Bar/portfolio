@@ -135,7 +135,7 @@ export default function PlatformDiagram({
         )}
         <p className="max-w-2xl text-sm leading-relaxed text-[color:var(--muted)]">
           {caption ??
-            "These tools aren't separate side projects — they're one system. Each operator surface I built ships with the service endpoint behind it and the storefront that consumes it. That's the full-stack part, drawn."}
+            "These tools aren't separate side projects — they're one system. Each operator surface I built ships with the service endpoint behind it and the storefront that consumes it. That's the whole shape of it, drawn."}
         </p>
       </figcaption>
 

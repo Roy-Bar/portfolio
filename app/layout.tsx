@@ -19,15 +19,15 @@ const siteUrl = "https://roy-bar-dev.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Roy Bar — Senior Frontend & Full-Stack Engineer",
+    default: "Roy Bar — Software Engineer",
     template: "%s · Roy Bar",
   },
   description:
-    "Senior frontend & full-stack engineer. I build experimentation platforms, content and pricing tools, and the e-commerce storefronts they drive — React, Next.js, TypeScript, C#/.NET.",
+    "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands — React, Next.js, TypeScript, and the .NET services behind them.",
   keywords: [
     "Roy Bar",
-    "Senior Frontend Engineer",
-    "Full-Stack Engineer",
+    "Software Engineer",
+    "Frontend Engineer",
     "Product Engineer",
     "Growth Engineer",
     "React",
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Roy Bar — Senior Frontend & Full-Stack Engineer",
+    title: "Roy Bar — Software Engineer",
     description:
-      "I build experimentation platforms, content and pricing tools, and the e-commerce storefronts they drive.",
+      "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
     siteName: "Roy Bar",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roy Bar — Senior Frontend & Full-Stack Engineer",
+    title: "Roy Bar — Software Engineer",
     description:
-      "I build experimentation platforms, content and pricing tools, and the e-commerce storefronts they drive.",
+      "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
   },
   robots: { index: true, follow: true },
 };
