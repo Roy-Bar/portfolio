@@ -42,7 +42,10 @@ export default function Hero() {
         >
           I&apos;m <span className="text-gradient">{profile.name}</span>.
           <br />
-          <span className="text-[color:var(--muted)]">{profile.role}.</span>
+          {/* Bind the last two words so the role never leaves one word orphaned. */}
+          <span className="text-[color:var(--muted)]">
+            {profile.role.replace(/ (\S+)$/, " $1")}.
+          </span>
         </motion.h1>
 
         <motion.p

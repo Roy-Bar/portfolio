@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Roy Bar — Software Engineer";
+export const alt = "Roy Bar — Solutions Engineering Team Lead";
 
 export default function OG() {
   return new ImageResponse(
@@ -52,7 +52,7 @@ export default function OG() {
               letterSpacing: -1,
             }}
           >
-            Software Engineer
+            Solutions Engineering Team Lead
           </div>
           <div
             style={{

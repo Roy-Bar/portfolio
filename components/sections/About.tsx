@@ -56,6 +56,15 @@ export default function About() {
               ships.
             </p>
             <p className="text-[color:var(--muted)]">
+              In October 2026 that came full circle: I now lead{" "}
+              <span className="text-[color:var(--foreground)]">
+                Solutions Engineering
+              </span>
+              , the team that owns the business&apos;s technical requests — with
+              the goal of a queue that moves faster and gets smaller — answering
+              quickly, and automating the recurring work or fixing it at the source.
+            </p>
+            <p className="text-[color:var(--muted)]">
               These days I build the team&apos;s AI tooling too — an autonomous UI
               QA agent, and a searchable knowledge graph over twenty of the
               group&apos;s services so cross-repo questions stop being

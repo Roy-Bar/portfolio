@@ -1,6 +1,6 @@
 export const profile = {
   name: "Roy Bar",
-  role: "Software Engineer",
+  role: "Solutions Engineering Team Lead",
   tagline:
     "I build the systems non-engineers operate — experimentation platforms, backoffice and pricing tools, and the multi-brand storefronts they drive. React, Next.js, TypeScript, and the .NET services behind them.",
   location: "Tel Aviv, Israel",
@@ -259,8 +259,18 @@ export const experience: Experience[] = [
     note: "Multi-brand direct-to-consumer e-commerce group — eight brands, multiple countries and currencies, millions of sessions a month. Its storefronts, content platform and backoffice tools are all built in house.",
     roles: [
       {
+        title: "Solutions Engineering Team Lead",
+        period: "Oct 2026 — Present",
+        bullets: [
+          "Lead Solutions Engineering, a new engineering team that owns the business's technical requests across the group's storefronts and backoffice systems.",
+          "Set the team's measure as a queue that is both faster and smaller: requests are answered quickly, and each recurring one is automated, fixed at source, or handed to the business as self-service, and what genuinely needs building reaches development as a defined ticket with the case for doing it.",
+          "Bring AI into the loop: agent-assisted triage and investigation across the group's systems, so a request arrives already understood and the answer comes with its evidence — root cause, past cases and the runbook.",
+          "Started with the foundations: a clean-up of the requests parked with development and a refresh of the team's 200+ page knowledge base.",
+        ],
+      },
+      {
         title: "Software Engineer",
-        period: "Sep 2021 — Present",
+        period: "Sep 2021 — Oct 2026",
         bullets: [
           "Five years on the group's storefront platform, across its category, product, review, cart and checkout surfaces — first on the legacy storefront, then on the Next.js platform that replaced it, and now the thin JSON APIs retiring the last legacy pages.",
           "Owned the measurement layer from 2022: the GA4 migration, a Google Tag Manager data layer built from scratch, an event taxonomy spanning every major page type, SEO structured data, and Datadog RUM for client-side observability.",

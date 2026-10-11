@@ -19,13 +19,16 @@ const siteUrl = "https://roy-bar-dev.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Roy Bar — Software Engineer",
+    default: "Roy Bar — Solutions Engineering Team Lead",
     template: "%s · Roy Bar",
   },
   description:
     "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands — React, Next.js, TypeScript, and the .NET services behind them.",
   keywords: [
     "Roy Bar",
+    "Solutions Engineering Team Lead",
+    "Engineering Team Lead",
+    "Solutions Engineering",
     "Software Engineer",
     "Frontend Engineer",
     "Product Engineer",
@@ -45,14 +48,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Roy Bar — Software Engineer",
+    title: "Roy Bar — Solutions Engineering Team Lead",
     description:
       "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
     siteName: "Roy Bar",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roy Bar — Software Engineer",
+    title: "Roy Bar — Solutions Engineering Team Lead",
     description:
       "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
   },
