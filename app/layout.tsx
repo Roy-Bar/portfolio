@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s · Roy Bar",
   },
   description:
-    "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands — React, Next.js, TypeScript, and the .NET services behind them.",
+    "I build both sides of e-commerce — the online stores customers shop on and the internal tools behind them — for eight brands. React, Next.js, TypeScript and .NET.",
   keywords: [
     "Roy Bar",
     "Solutions Engineering Team Lead",
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Roy Bar — Solutions Engineering Team Lead",
     description:
-      "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
+      "I build both sides of e-commerce — the online stores customers shop on and the internal tools behind them — for eight brands.",
     siteName: "Roy Bar",
   },
   twitter: {
     card: "summary_large_image",
     title: "Roy Bar — Solutions Engineering Team Lead",
     description:
-      "I build the backoffice tools, pricing systems and storefronts behind eight e-commerce brands.",
+      "I build both sides of e-commerce — the online stores customers shop on and the internal tools behind them — for eight brands.",
   },
   robots: { index: true, follow: true },
 };

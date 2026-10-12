@@ -2,7 +2,7 @@ export const profile = {
   name: "Roy Bar",
   role: "Solutions Engineering Team Lead",
   tagline:
-    "I build the systems non-engineers operate — experimentation platforms, backoffice and pricing tools, and the multi-brand storefronts they drive. React, Next.js, TypeScript, and the .NET services behind them.",
+    "I build both sides of e-commerce — the online stores customers shop on, and the internal tools that let teams launch products, set prices and run experiments without waiting for a developer. React, Next.js, TypeScript, and the .NET services behind them.",
   location: "Tel Aviv, Israel",
   email: "roy.bar134@gmail.com",
   cvHref: "/cv.pdf",
@@ -262,9 +262,9 @@ export const experience: Experience[] = [
         title: "Solutions Engineering Team Lead",
         period: "Oct 2026 — Present",
         bullets: [
-          "Lead Solutions Engineering, a new engineering team that owns the business's technical requests across the group's storefronts and backoffice systems.",
-          "Set the team's measure as a queue that is both faster and smaller: requests are answered quickly, and each recurring one is automated, fixed at source, or handed to the business as self-service, and what genuinely needs building reaches development as a defined ticket with the case for doing it.",
-          "Bring AI into the loop: agent-assisted triage and investigation across the group's systems, so a request arrives already understood and the answer comes with its evidence — root cause, past cases and the runbook.",
+          "Lead Solutions Engineering, the technical go-to for the rest of the company across its online stores and internal tools.",
+          "The goal is simple: answer faster, and make recurring problems go away for good — fixed at the source, automated, or turned into self-service — with what genuinely needs building reaching development as a well-defined ticket.",
+          "Bringing AI and agentic workflows into how the team works, so less time goes on repetitive requests and more on the problems worth solving.",
           "Started with the foundations: a clean-up of the requests parked with development and a refresh of the team's 200+ page knowledge base.",
         ],
       },

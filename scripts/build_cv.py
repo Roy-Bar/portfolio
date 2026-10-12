@@ -121,10 +121,10 @@ c.drawString(L, y, "roy-bar-dev.vercel.app · linkedin.com/in/roybarlinked · gi
 y -= 16
 
 y = para(
-    "Six years building multi-brand e-commerce platforms — React and Next.js storefronts, the operator tools "
-    "behind them, and the C#/.NET services they run on. I specialise in the systems non-engineers operate: "
-    "experimentation, content targeting, and the backoffice systems behind catalog, pricing and merchandising. "
-    "Now leading Solutions Engineering — and spending as much time building agents and AI tooling as features.",
+    "Six years building both sides of e-commerce — the online stores customers shop on, and the internal tools "
+    "and C#/.NET services behind them — for eight brands across many countries and currencies: product, cart and "
+    "checkout; catalog and pricing; A/B testing and personalization. Now leading Solutions Engineering, and "
+    "bringing AI and agentic workflows into how the team works.",
     L, y, FULL_W, size=8.8, lead=11.6, color=BODY)
 y -= 10
 
@@ -169,12 +169,12 @@ assert abs(my - _probe) < 0.01, "panel height model drifted: %.2f vs %.2f" % (my
 my -= 12
 
 BUILD = [
+    ("Online stores —", "Category, product, cart and checkout for eight brands across multiple markets "
+     "— a legacy storefront, the Next.js platform that replaced it, and the .NET APIs retiring what's left."),
     ("Experimentation platforms —", "A/B testing end to end: dashboard, setup wizard, traffic allocation, "
      "GrowthBook integration, and a results page that reads the statistics back in."),
-    ("Content targeting —", "Audience, geography, device and cart-based page targeting; variant priority, "
+    ("Personalization —", "Audience, geography, device and cart-based page targeting; variant priority, "
      "drafts and publishing; optimistic locking so two editors can't overwrite each other."),
-    ("Storefront platforms —", "Category, product, cart and checkout for eight brands across multiple markets "
-     "— a legacy storefront, the Next.js platform that replaced it, and the .NET APIs retiring what's left."),
     ("Backoffice systems —", "The admin side of commerce: catalog and pricing operations, multi-currency "
      "overrides, crossed-price validation and draft/publish workflows — plus the C# services behind them."),
     ("Design systems —", "Design tokens and per-brand theming that turn diverging brands into configuration "
@@ -205,8 +205,8 @@ my -= 6
 
 ROLES = [
     ("Solutions Engineering Team Lead", "Oct 2026 – Present",
-     "Lead a new engineering team that owns the business's technical requests across every brand. The goal is "
-     "a faster and smaller queue — AI-assisted triage, automation, fixes at source and self-service."),
+     "Lead the team that is the technical go-to for the rest of the company. The goal: answer faster and make "
+     "recurring problems go away for good — increasingly with AI and agentic workflows."),
     ("Software Engineer", "Sep 2021 – Oct 2026",
      "Owned three product areas end to end across a React admin app, a Next.js storefront and three .NET "
      "services. De-facto frontend reviewer and author of the user guides."),

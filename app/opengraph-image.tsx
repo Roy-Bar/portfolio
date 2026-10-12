@@ -61,7 +61,7 @@ export default function OG() {
               color: "#6f6f80",
             }}
           >
-            Backoffice, pricing and experimentation systems for 8 e-commerce brands
+            Online stores and the internal tools behind them, for 8 e-commerce brands
           </div>
         </div>
 

@@ -20,12 +20,13 @@ export default function About() {
             className="md:col-span-3 text-lg leading-relaxed text-[color:var(--foreground)]/90 space-y-4"
           >
             <p>
-              I build the software other people{" "}
-              <em className="text-[color:var(--accent)] not-italic">operate</em> —
-              the backoffice systems, targeting rules and pricing tools that let
-              content and product teams change a storefront without touching code. It
-              means caring about how an interface feels, how it holds up at
-              scale, and the services behind it in equal measure.
+              I build{" "}
+              <em className="text-[color:var(--accent)] not-italic">both sides</em>{" "}
+              of e-commerce: the online stores customers shop on, and the internal
+              tools behind them that let non-technical teams launch products, set
+              prices, run experiments and change the site without waiting for a
+              developer. It means caring about how an interface feels, how it
+              holds up at scale, and the services behind it in equal measure.
             </p>
             <p className="text-[color:var(--muted)]">
               For six years that has been at{" "}
@@ -60,9 +61,9 @@ export default function About() {
               <span className="text-[color:var(--foreground)]">
                 Solutions Engineering
               </span>
-              , the team that owns the business&apos;s technical requests — with
-              the goal of a queue that moves faster and gets smaller — answering
-              quickly, and automating the recurring work or fixing it at the source.
+              , the technical go-to for the rest of the company. The goal is
+              simple: answer faster, and make recurring problems go away for good,
+              increasingly with AI and agentic workflows.
             </p>
             <p className="text-[color:var(--muted)]">
               These days I build the team&apos;s AI tooling too — an autonomous UI
